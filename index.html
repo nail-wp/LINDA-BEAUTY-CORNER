@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>LINDA BEAUTY CORNER · Hair, Pedicure &amp; Beauty</title>
+    <meta name="description" content="LINDA BEAUTY CORNER – premium hair, Pedicure, nails, makeup & pedicure in an elegant, warm atmosphere." />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.0.0/dist/iconify-icon.min.js">
+    </script>
+    <style>
+        /* ─── RESET & VARIABLES ─── */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --deep-plum: #4A1F3D;
+            --champagne: #C9A86A;
+            --warm-ivory: #FAF7F2;
+            --soft-beige: #F1E8DF;
+            --soft-black: #1C1A1B;
+            --dark-plum: #35152B;
+            --white: #ffffff;
+            --shadow-subtle: 0 8px 24px rgba(0, 0, 0, 0.04);
+            --radius-card: 12px;
+            --font-heading: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Inter', -apple-system, sans-serif;
+            --header-h: 68px;
+            --placeholder-bg: #E8E2DA;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: var(--font-body);
+            background: var(--warm-ivory);
+            color: var(--soft-black);
+            line-height: 1.5;
+            padding-bottom: 80px;
+            -webkit-font-smoothing: antialiased;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+        }
+
+        /* ─── HEADER ─── */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 200;
+            height: var(--header-h);
+            background: rgba(250, 247, 242, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(201, 168, 106, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            transition: box-shadow 0.3s;
+        }
+        .header.scrolled {
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+        }
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo-img {
+            height: 40px;
+            width: auto;
+            border-radius: 40px;
+            object-fit: contain;
+        }
+        .header-brand h1 {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            color: var(--deep-plum);
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .lang-toggle {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--soft-black);
+            padding: 5px 14px;
+            border-radius: 30px;
+            border: 1px solid rgba(74, 31, 61, 0.2);
+            background: var(--white);
+            transition: all 0.25s;
+            letter-spacing: 0.03em;
+        }
+        .lang-toggle:hover {
+            border-color: var(--champagne);
+            color: var(--deep-plum);
+        }
+        .lang-toggle.active {
+            background: var(--deep-plum);
+            color: var(--white);
+            border-color: var(--deep-plum);
+        }
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--deep-plum);
+            padding: 5px 14px;
+            border: 1px solid rgba(74, 31, 61, 0.15);
+            border-radius: 30px;
+            transition: all 0.25s;
+            background: var(--white);
+        }
+        .header-phone:hover {
+            background: var(--deep-plum);
+            color: var(--white);
+            border-color: var(--deep-plum);
+        }
+        .header-phone iconify-icon {
+            font-size: 14px;
+        }
+        .header-phone span {
+            display: none;
+        }
+
+        @media (min-width: 480px) {
+            .header-phone span {
+                display: inline;
+            }
+            .header-phone {
+                padding: 5px 18px 5px 14px;
+            }
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            margin-top: var(--header-h);
+            min-height: 360px;
+            height: 65vh;
+            background: linear-gradient(135deg, rgba(74, 31, 61, 0.35), rgba(26, 20, 24, 0.2)),
+                url('img/bg.jpg') center 30%/cover no-repeat;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            position: relative;
+        }
+        .hero-content {
+            max-width: 100%;
+            color: var(--white);
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            position: relative;
+            z-index: 2;
+        }
+        .hero-content .sub {
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--champagne);
+            margin-bottom: 4px;
+            display: block;
+        }
+        .hero-content h2 {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 1.05;
+            margin-bottom: 8px;
+        }
+        .hero-content p {
+            font-size: 14px;
+            font-weight: 300;
+            opacity: 0.92;
+            margin-bottom: 20px;
+            max-width: 320px;
+        }
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .btn-primary {
+            background: var(--deep-plum);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 13px;
+            border: 1px solid var(--deep-plum);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.25s;
+        }
+        .btn-primary:hover {
+            background: var(--dark-plum);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(74, 31, 61, 0.25);
+        }
+        .btn-primary:active {
+            transform: scale(0.96);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 13px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.25s;
+        }
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--champagne);
+        }
+
+        @media (min-width: 640px) {
+            .hero-content h2 {
+                font-size: 42px;
+            }
+            .hero-content p {
+                font-size: 16px;
+                max-width: 400px;
+            }
+            .hero {
+                padding: 0 48px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .hero-content h2 {
+                font-size: 56px;
+            }
+        }
+
+        /* ─── FILTER BAR (sticky) ─── */
+        .filter-bar-wrapper {
+            position: sticky;
+            top: var(--header-h);
+            z-index: 95;
+            background: var(--warm-ivory);
+            padding: 10px 12px 6px;
+            border-bottom: 1px solid rgba(201, 168, 106, 0.15);
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            transition: box-shadow 0.3s;
+        }
+        .filter-bar-wrapper.scrolled {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+        }
+        .filter-bar-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+        .filter-btn {
+            padding: 8px 18px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--soft-black);
+            border-bottom: 2px solid transparent;
+            transition: all 0.25s;
+            cursor: pointer;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            background: transparent;
+            border-radius: 0;
+        }
+        .filter-btn:hover {
+            color: var(--deep-plum);
+        }
+        .filter-btn.active {
+            color: var(--deep-plum);
+            border-bottom-color: var(--champagne);
+            font-weight: 600;
+        }
+
+        /* ─── SERVICES OVERVIEW (icon cards) ─── */
+        .section-bg-ivory {
+            background: var(--warm-ivory);
+        }
+        .section-bg-beige {
+            background: var(--soft-beige);
+        }
+        .section-eyebrow {
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--champagne);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.4rem;
+            line-height: 1.15;
+            margin-bottom: 0.75rem;
+            color: var(--deep-plum);
+        }
+        @media (max-width: 640px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .service-icon-card {
+            background: var(--white);
+            padding: 1.8rem 1.2rem;
+            border-radius: var(--radius-card);
+            text-align: center;
+            box-shadow: var(--shadow-subtle);
+            transition: 0.3s;
+            border: 1px solid rgba(201, 168, 106, 0.1);
+        }
+        .service-icon-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+        }
+        .service-icon-card iconify-icon {
+            font-size: 2.4rem;
+            color: var(--champagne);
+            margin-bottom: 0.6rem;
+        }
+        .service-icon-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--deep-plum);
+        }
+        .service-icon-card p {
+            font-size: 0.85rem;
+            color: #4a3f3a;
+            margin: 0.4rem 0 0.8rem;
+        }
+        .service-icon-card a {
+            color: var(--deep-plum);
+            font-weight: 500;
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--champagne);
+            padding-bottom: 2px;
+        }
+
+        /* ─── GALLERY ─── */
+        .gallery-wrap {
+            padding: 16px 12px 40px;
+            background: var(--warm-ivory);
+        }
+        .masonry {
+            column-count: 2;
+            column-gap: 12px;
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+        .masonry .item-card {
+            break-inside: avoid;
+            margin-bottom: 12px;
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(201, 168, 106, 0.1);
+            transition: transform 0.25s, box-shadow 0.25s;
+            cursor: pointer;
+        }
+        .masonry .item-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+        }
+        .masonry .item-card:active {
+            transform: scale(0.98);
+        }
+        .item-img-wrap {
+            overflow: hidden;
+            background: var(--placeholder-bg);
+            position: relative;
+            min-height: 120px;
+        }
+        .item-img-wrap .img-placeholder {
+            position: absolute;
+            inset: 0;
+            background: var(--placeholder-bg);
+            transition: opacity 0.5s ease;
+        }
+        .item-img-wrap .img-placeholder.hidden {
+            opacity: 0;
+        }
+        .item-img-wrap img {
+            width: 100%;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            min-height: 120px;
+            background: var(--placeholder-bg);
+        }
+        .item-img-wrap img.loaded {
+            opacity: 1;
+        }
+        .item-body {
+            padding: 10px 12px 12px;
+        }
+        .item-body h3 {
+            font-family: var(--font-heading);
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--deep-plum);
+            margin-bottom: 1px;
+        }
+        .item-body .desc {
+            font-size: 11px;
+            color: #6a5f58;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+        .item-body .price {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--deep-plum);
+        }
+        .item-tag {
+            display: inline-block;
+            font-size: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 2px 8px;
+            background: var(--soft-beige);
+            border-radius: 12px;
+            color: var(--deep-plum);
+            margin-right: 3px;
+            margin-bottom: 2px;
+        }
+
+        @media (min-width: 480px) {
+            .masonry {
+                column-count: 2;
+                gap: 16px;
+            }
+        }
+        @media (min-width: 768px) {
+            .masonry {
+                column-count: 3;
+                gap: 20px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .masonry {
+                column-count: 4;
+                gap: 24px;
+            }
+        }
+
+        /* ─── LIGHTBOX ─── */
+        .lightbox-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 500;
+            background: rgba(0, 0, 0, 0.92);
+            backdrop-filter: blur(14px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 16px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 14px;
+            right: 18px;
+            font-size: 30px;
+            color: #fff;
+            opacity: 0.6;
+            z-index: 10;
+            transition: 0.2s;
+        }
+        .lightbox-close:hover {
+            opacity: 1;
+        }
+        .lightbox-container {
+            max-width: 540px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+        .lightbox-container img {
+            width: 100%;
+            max-height: 55vh;
+            object-fit: contain;
+            border-radius: 8px;
+            background: #1A1816;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+        }
+        .lightbox-info {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            color: #fff;
+        }
+        .lightbox-info .lb-text h3 {
+            font-family: var(--font-heading);
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--champagne);
+            line-height: 1.2;
+        }
+        .lightbox-info .lb-text .lb-price {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .lightbox-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .btn-book-lightbox {
+            background: var(--champagne);
+            color: var(--soft-black);
+            padding: 10px 18px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid var(--champagne);
+            flex: 1;
+            justify-content: center;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .btn-book-lightbox:hover {
+            background: #dbb87a;
+        }
+        .btn-call-lightbox {
+            background: transparent;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 13px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex: 1;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        .btn-call-lightbox:hover {
+            border-color: var(--champagne);
+            color: var(--champagne);
+        }
+
+        /* ─── TESTIMONIALS (auto-scroll + manual) ─── */
+        .testimonial-section {
+            overflow: hidden;
+            position: relative;
+        }
+        .testimonial-track {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 12px 4px 20px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            cursor: grab;
+        }
+        .testimonial-track:active {
+            cursor: grabbing;
+        }
+        .testimonial-track::-webkit-scrollbar {
+            height: 4px;
+        }
+        .testimonial-track::-webkit-scrollbar-thumb {
+            background: var(--champagne);
+            border-radius: 10px;
+        }
+        .testimonial-track::-webkit-scrollbar-track {
+            background: rgba(201, 168, 106, 0.15);
+            border-radius: 10px;
+        }
+        .testimonial-item {
+            max-width: 270px;
+            flex: 0 0 auto;
+            scroll-snap-align: start;
+            background: var(--white);
+            padding: 1.8rem;
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-subtle);
+            border-left: 4px solid var(--champagne);
+            transition: transform 0.3s;
+        }
+        .testimonial-item:hover {
+            transform: scale(1.01);
+        }
+        .testimonial-item p {
+            font-style: italic;
+            color: #2a2728;
+            font-size: 0.95rem;
+        }
+        .testimonial-item .client {
+            margin-top: 0.8rem;
+            font-weight: 600;
+            color: var(--deep-plum);
+            font-size: 0.9rem;
+        }
+        .testimonial-item .client span {
+            font-weight: 400;
+            color: #7a6e66;
+            font-size: 0.8rem;
+        }
+
+        /* ─── BOOKING ─── */
+        .booking-section {
+            background: var(--dark-plum);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 4px solid var(--champagne);
+        }
+        .booking-section h2 {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--white);
+        }
+        .booking-section .phone-big {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--champagne);
+            display: inline-block;
+            padding: 8px 28px;
+            border: 2px solid var(--champagne);
+            border-radius: 60px;
+            margin: 12px 0 4px;
+            transition: 0.25s;
+        }
+        .booking-section .phone-big:hover {
+            background: var(--champagne);
+            color: var(--dark-plum);
+        }
+        .booking-section .small-note {
+            color: #b0a89e;
+            font-size: 12px;
+        }
+
+        /* ─── FOOTER ─── */
+        .site-footer {
+            background: var(--dark-plum);
+            color: #d6d0c8;
+            padding: 40px 20px 100px;
+            border-top: 4px solid var(--champagne);
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 28px;
+        }
+        .footer-col h4 {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--champagne);
+            margin-bottom: 10px;
+            letter-spacing: 0.04em;
+        }
+        .footer-col p,
+        .footer-col a {
+            font-size: 13px;
+            line-height: 1.7;
+            color: #b0a89e;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 3px;
+        }
+        .footer-col a {
+            color: var(--champagne);
+            transition: color 0.2s;
+        }
+        .footer-col a:hover {
+            color: var(--white);
+        }
+        .footer-col .amharic-name {
+            font-size: 14px;
+            color: #d6d0c8;
+            margin-top: 2px;
+            font-weight: 400;
+        }
+        .footer-col .creator-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 500;
+            color: var(--champagne);
+            border: 1px solid rgba(201, 168, 124, 0.25);
+            padding: 4px 16px 4px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            transition: all 0.25s;
+            margin-top: 4px;
+        }
+        .footer-col .creator-link:hover {
+            background: var(--champagne);
+            color: var(--dark-plum);
+            border-color: var(--champagne);
+        }
+        .footer-col .creator-link iconify-icon {
+            font-size: 14px;
+        }
+        .footer-divider {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            margin: 18px 0 10px;
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            color: #7a6e66;
+            padding-top: 6px;
+        }
+        .footer-bottom a {
+            color: #7a6e66;
+            transition: color 0.2s;
+        }
+        .footer-bottom a:hover {
+            color: var(--champagne);
+        }
+
+        @media (min-width: 480px) {
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (min-width: 768px) {
+            .footer-inner {
+                grid-template-columns: 1.2fr 1.8fr 1.2fr;
+                gap: 40px;
+            }
+            .site-footer {
+                padding: 48px 40px 100px;
+            }
+        }
+
+        /* ─── STICKY CTA ─── */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 150;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(201, 168, 106, 0.2);
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .sticky-cta .cta-btn {
+            background: var(--deep-plum);
+            color: var(--white);
+            padding: 10px 28px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 14px;
+            border: 1px solid var(--deep-plum);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            flex: 1;
+            justify-content: center;
+            max-width: 280px;
+            transition: all 0.2s;
+        }
+        .sticky-cta .cta-btn:active {
+            transform: scale(0.96);
+        }
+        .sticky-cta .cta-map-btn {
+            background: var(--champagne);
+            color: var(--soft-black);
+            padding: 10px 12px;
+            border-radius: 40px;
+            border: 1px solid var(--champagne);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            font-size: 18px;
+            min-width: 44px;
+            min-height: 44px;
+            flex-shrink: 0;
+        }
+        .sticky-cta .cta-map-btn:active {
+            transform: scale(0.92);
+        }
+        .sticky-cta .cta-map-btn:hover {
+            background: var(--gold-dark, #b08b5a);
+            border-color: var(--gold-dark, #b08b5a);
+            color: var(--white);
+        }
+
+        @media (min-width: 480px) {
+            .sticky-cta .cta-btn {
+                max-width: 220px;
+            }
+            .sticky-cta .cta-map-btn {
+                min-width: 48px;
+                min-height: 48px;
+                padding: 10px 14px;
+                font-size: 20px;
+            }
+        }
+
+        /* ─── UTILITY ─── */
+        .text-center {
+            text-align: center;
+        }
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        section {
+            padding: 3.5rem 0;
+        }
+        @media (min-width: 768px) {
+            section {
+                padding: 4.5rem 0;
+            }
+            .container {
+                padding: 0 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══════ HEADER ═══════ -->
+    <header class="header" id="mainHeader">
+        <div class="header-brand">
+            <img src="img/logo.png" alt="LINDA BEAUTY CORNER" class="logo-img" />
+            <h1>LINDA</h1>
+        </div>
+        <div class="header-actions">
+            <button class="lang-toggle" id="langToggle">አማ</button>
+            <a href="tel:+251949017356" class="header-phone">
+                <iconify-icon icon="lucide:phone"></iconify-icon>
+                <span>+251949017356</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- ═══════ HERO ═══════ -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="sub" id="heroSub">✦ LINDA BEAUTY CORNER</span>
+            <h2 id="heroTitle">Beauty, Confidence &amp; Elegance.</h2>
+            <p id="heroDesc">Discover beautiful hair, pedicure, nails, makeup &amp; pedicure — all designed to make you feel your best.</p>
+            <div class="btn-group">
+                <a href="#gallery" class="btn-primary" id="heroBtn1">
+                    <iconify-icon icon="lucide:sparkles"></iconify-icon> <span>Explore Services</span>
+                </a>
+                <a href="#book" class="btn-outline" id="heroBtn2">
+                    <iconify-icon icon="lucide:calendar"></iconify-icon> <span>Book Appointment</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ SERVICES OVERVIEW (icon cards) ═══════ -->
+    <section class="section-bg-ivory">
+        <div class="container text-center">
+            <div class="section-eyebrow" id="servicesEyebrow">✦ Our Services</div>
+            <h2 class="section-title" id="servicesTitle">Beauty, crafted for you</h2>
+            <div class="services-grid">
+                <div class="service-icon-card">
+                    <iconify-icon icon="lucide:scissors"></iconify-icon>
+                    <h3 id="sHair">Hair</h3>
+                    <p id="sHairDesc">Styling, treatments, coloring &amp; extensions</p>
+                    <a href="#gallery" id="sHairLink">View Services →</a>
+                </div>
+                <div class="service-icon-card">
+                    <iconify-icon icon="lucide:footprints"></iconify-icon>
+                    <h3 id="sPedicure">Pedicure</h3>
+                    <p id="sPedicureDesc">Classic, spa, gel, soak &amp; massage</p>
+                    <a href="#gallery" id="sPedicureLink">View Services →</a>
+                </div>
+
+                <div class="service-icon-card">
+                    <iconify-icon icon="lucide:brush"></iconify-icon>
+                    <h3 id="sNails">Nails</h3>
+                    <p id="sNailsDesc">Manicure, gel, art &amp; pedicure</p>
+                    <a href="#gallery" id="sNailsLink">View Services →</a>
+                </div>
+                <div class="service-icon-card">
+                    <iconify-icon icon="lucide:palette"></iconify-icon>
+                    <h3 id="sMakeup">Makeup</h3>
+                    <p id="sMakeupDesc">Natural, bridal &amp; event makeup</p>
+                    <a href="#gallery" id="sMakeupLink">View Services →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ GALLERY with STICKY FILTER ═══════ -->
+    <div class="filter-bar-wrapper" id="filterWrapper">
+        <button class="filter-btn active" data-filter="all" id="fAll">All</button>
+        <button class="filter-btn" data-filter="hair" id="fHair">Hair</button>
+        <button class="filter-btn" data-filter="Pedicure" id="fpedicure">Pedicure</button>
+        <button class="filter-btn" data-filter="nails" id="fNails">Nails</button>
+        <button class="filter-btn" data-filter="makeup" id="fMakeup">Makeup</button>
+    </div>
+
+    <div class="gallery-wrap" id="gallery">
+        <div class="container">
+            <div class="section-eyebrow" id="galleryEyebrow">✦ Portfolio</div>
+            <h2 class="section-title" id="galleryTitle">Our beauty services</h2>
+        </div>
+        <div class="masonry" id="masonryGrid"></div>
+    </div>
+
+    <!-- ═══════ LIGHTBOX ═══════ -->
+    <div class="lightbox-overlay" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <div class="lightbox-container">
+            <img id="lightboxImg" src="" alt="Service" />
+            <div class="lightbox-info">
+                <div class="lb-text">
+                    <h3 id="lightboxName">Service</h3>
+                    <span class="lb-price" id="lightboxPrice">[PRICE]</span>
+                </div>
+                <div class="lightbox-actions">
+                    <a href="#" class="btn-book-lightbox" id="lbBookBtn">
+                        <iconify-icon icon="lucide:download"></iconify-icon> <span>Download Image</span>
+                    </a>
+                    <a href="tel:+251949017356" class="btn-call-lightbox" id="lbCallBtn">
+                        <iconify-icon icon="lucide:phone"></iconify-icon> <span>Call to Book</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════ TESTIMONIALS (auto-scroll + manual) ═══════ -->
+    <section class="section-bg-beige testimonial-section">
+        <div class="container">
+            <div class="text-center">
+                <div class="section-eyebrow" id="testimonialEyebrow">✦ Testimonials</div>
+                <h2 class="section-title" id="testimonialTitle">What our guests say</h2>
+            </div>
+            <div class="testimonial-track" id="testimonialTrack">
+                <!-- filled by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ ABOUT ═══════ -->
+    <section class="section-bg-ivory">
+        <div class="container" style="max-width:800px; margin:0 auto; text-align:center;">
+            <div class="section-eyebrow" id="aboutEyebrow">✦ About LINDA</div>
+            <h2 class="section-title" id="aboutTitle">Where beauty meets care</h2>
+            <p style="font-size:1.05rem; color:#3d3a3b; line-height:1.8;" id="aboutDesc">
+                At LINDA BEAUTY CORNER, we believe in the power of personal transformation.
+                Our skilled team offers bespoke hair, nail, makeup, and pedicure services
+                in a warm, elegant space. Every detail is crafted to make you feel confident and radiant.
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══════ BOOKING ═══════ -->
+    <section class="booking-section" id="book">
+        <div class="container">
+            <h2 id="bookTitle">Ready to feel beautiful?</h2>
+            <p style="color:#b0a89e; margin-bottom:4px; font-size:13px;" id="bookSub">Book your appointment and let us take care of the rest.</p>
+            <a href="tel:+251969088049" class="phone-big">📞 0969088049</a>
+            <p class="small-note" id="bookHours">2:00am - 12:00pm ·  Bole, Atlas Platinum plaza 2nd floor</p>
+        </div>
+    </section>
+
+    <!-- ═══════ FOOTER ═══════ -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <!-- Brand -->
+            <div class="footer-col">
+                <h4>LINDA BEAUTY CORNER</h4>
+                <p style="color:#b0a89e; font-size:13px; line-height:1.6; display:block; gap:0;">
+                    Elegance &amp; beauty in every detail.
+                </p>
+                <p style="margin-top:8px; display:block; gap:0;">
+                    <span style="display:inline-block; background:var(--champagne); width:32px; height:2px; border-radius:2px;"></span>
+                </p>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-col">
+                <h4>📍 Contact</h4>
+                <p><iconify-icon icon="lucide:phone" style="color:var(--champagne);"></iconify-icon> 0949017356 / 0969088049</p>
+                <p><a href="[GOOGLE MAPS URL]" target="_blank"><iconify-icon icon="lucide:map-pin" style="color:var(--champagne);"></iconify-icon> Bole, Atlas Platinum plaza 2nd floor</a></p>
+                <p><iconify-icon icon="lucide:instagram" style="color:var(--champagne);"></iconify-icon> <a href="https://www.instagram.com/linda_beauty_corner?igsh=bWpxbnB5OHB3Y3lr&igsi=bWpxbnB5OHB3Y3lr" target="_blank">INSTAGRAM</a></p>
+                <p><iconify-icon icon="fa6-brands:tiktok" style="color:var(--champagne);"></iconify-icon> <a href="https://www.tiktok.com/@linda.beauty.corner?_r=1&_t=ZS-98sSaJii1rw" target="_blank">TIKTOK</a></p>
+                <p><iconify-icon icon="lucide:clock" style="color:var(--champagne);"></iconify-icon> 2:00am - 12:00pm </p>
+            </div>
+
+            <!-- Creator -->
+            <div class="footer-col">
+                <h4>✦ Creator</h4>
+                <p style="display:block; gap:0; margin-bottom:2px;">
+                    <span style="color:#d6d0c8;">Yeabsra Getye</span> &amp;
+                    <span style="color:#d6d0c8;">Bereket Kebede</span>
+                </p>
+                <p class="amharic-name" style="display:block; gap:0; font-size:14px; color:#b0a89e; margin-bottom:6px;">
+                    የአብስራ ጌትዬ እና በረከት ከበደ
+                </p>
+                <a href="https://ethio-apex.vercel.app/" target="_blank" rel="noopener" class="creator-link">
+                    <iconify-icon icon="lucide:globe"></iconify-icon> ethio-apex.vercel.app
+                </a>
+                <p style="display:block; gap:0; margin-top:8px; font-size:11px; color:#7a6e66;">
+                    <iconify-icon icon="lucide:info" style="font-size:12px;"></iconify-icon> Need a site like this? Talk to us.
+                </p>
+            </div>
+        </div>
+
+        <hr class="footer-divider" />
+        <div class="footer-bottom">
+            <span>&copy; 2026 LINDA BEAUTY CORNER · All rights reserved.</span>
+            <span>
+                Built with <span style="color:var(--champagne);">✦</span> by
+                <a href="https://ethio-apex.vercel.app/" target="_blank">Yeabsra &amp; Bereket</a>
+            </span>
+        </div>
+    </footer>
+
+    <!-- ═══════ STICKY CTA ═══════ -->
+    <div class="sticky-cta">
+        <a href="tel:+251949017356" class="cta-btn" id="stickyBtn">
+            <iconify-icon icon="lucide:phone"></iconify-icon> <span>Book Now</span>
+        </a>
+        <a href="[GOOGLE MAPS URL]" target="_blank" class="cta-map-btn" aria-label="Find us on Google Maps">
+            <iconify-icon icon="lucide:map-pin"></iconify-icon>
+        </a>
+    </div>
+
+    <!-- ════════════════════════════════════════════════ -->
+    <!-- JAVASCRIPT – CATALOG, I18N, TESTIMONIALS, ETC. -->
+    <!-- ════════════════════════════════════════════════ -->
+    <script>
+        (function() {
+            'use strict';
+
+            // ─── PHONE & PLACEHOLDERS ──────────────────────────────
+            const PHONE = '[PHONE NUMBER]';
+            const MAP_URL = '[GOOGLE MAPS URL]';
+            const INSTA_URL = '[INSTAGRAM URL]';
+
+            // ─── CATALOG (Hair 20, Pedicure 6, Nails 20, Makeup 13) ──
+            const CATALOG = [
+                // ─── HAIR (20 items) ──────────────────────────────────
+                { id: 'h1', name: { en: 'Classic Haircut', am: 'ክላሲክ የፀጉር መቆረጥ' }, desc: { en: 'Precision cut tailored to your style.', am: 'ለእርስዎ ዘይቤ የተበጀ ትክክለኛ መቆረጥ' }, tags: ['hair'], price: 'ETB 1200', img: 'img/hair/1.jpeg' },
+                { id: 'h2', name: { en: 'Blow Dry & Style', am: 'ብሎ ድራይ እና ቅጥ' }, desc: { en: 'Voluminous, glossy blow-dry with lasting hold.', am: 'ለስላሳ እና አንጸባራቂ ብሎ ድራይ' }, tags: ['hair'], price: 'ETB 1500', img: 'img/hair/2.jpeg' },
+                { id: 'h3', name: { en: 'Full Highlights', am: 'ሙሉ ሃይላይት' }, desc: { en: 'Sun-kissed highlights for dimension and depth.', am: 'ለተፈጥሯዊ መልክ የሚያበሩ ሃይላይቶች' }, tags: ['hair'], price: 'ETB 2500', img: 'img/hair/3.jpeg' },
+                { id: 'h4', name: { en: 'Balayage', am: 'ባላያጅ' }, desc: { en: 'Hand-painted color for a natural, seamless blend.', am: 'በእጅ የተሳለ ቀለም ለተፈጥሯዊ መልክ' }, tags: ['hair'], price: 'ETB 2800', img: 'img/hair/4.jpeg' },
+                { id: 'h5', name: { en: 'Keratin Treatment', am: 'ኬራቲን ህክምና' }, desc: { en: 'Smoothing treatment to tame frizz and add shine.', am: 'ፀጉርን ለስላሳ እና አንጸባራቂ የሚያደርግ ህክምና' }, tags: ['hair'], price: 'ETB 3000', img: 'img/hair/5.jpeg' },
+                { id: 'h6', name: { en: 'Deep Conditioning', am: 'ጥልቅ ኮንዲሽነር' }, desc: { en: 'Intense moisture treatment for dry, damaged hair.', am: 'ለደረቀ እና ለተጎዳ ፀጉር ጥልቅ እርጥበት' }, tags: ['hair'], price: 'ETB 1800', img: 'img/hair/6.jpeg' },
+                { id: 'h7', name: { en: 'Hair Extensions', am: 'የፀጉር ተጨማሪ' }, desc: { en: 'Seamless clip-in or tape-in extensions for instant length.', am: 'ለፈጣን ርዝመት የሚያገለግሉ ተጨማሪዎች' }, tags: ['hair'], price: 'ETB 3500', img: 'img/hair/7.jpeg' },
+                { id: 'h8', name: { en: 'Bridal Updo', am: 'የሰርግ አሰራር' }, desc: { en: 'Elegant, long-lasting updo for your special day.', am: 'ለልዩ ቀንዎ የሚያምር እና ዘላቂ አሰራር' }, tags: ['hair'], price: 'ETB 3200', img: 'img/hair/8.jpeg' },
+                { id: 'h9', name: { en: 'Special Occasion Style', am: 'ለዝግጅት ቅጥ' }, desc: { en: 'Glamorous styling for events, parties, and photos.', am: 'ለዝግጅቶች እና ፎቶዎች የሚያምር ቅጥ' }, tags: ['hair'], price: 'ETB 2200', img: 'img/hair/9.jpeg' },
+                { id: 'h10', name: { en: 'Hair Botox', am: 'የፀጉር ቦቶክስ' }, desc: { en: 'Restorative treatment that revitalizes and repairs.', am: 'ፀጉርን የሚያድስ እና የሚጠግን ህክምና' }, tags: ['hair'], price: 'ETB 2700', img: 'img/hair/10.jpeg' },
+                { id: 'h11', name: { en: 'Men\'s Haircut', am: 'የወንዶች መቆረጥ' }, desc: { en: 'Sharp, modern cuts for men, including fade and trim.', am: 'ለወንዶች ዘመናዊ እና ስለት ያለ መቆረጥ' }, tags: ['hair'], price: 'ETB 1000', img: 'img/hair/11.jpeg' },
+                { id: 'h12', name: { en: 'Kids Haircut', am: 'የልጆች መቆረጥ' }, desc: { en: 'Gentle, fun haircuts for children of all ages.', am: 'ለልጆች ቀላል እና አስደሳች መቆረጥ' }, tags: ['hair'], price: 'ETB 800', img: 'img/hair/12.jpeg' },
+                { id: 'h13', name: { en: 'Scalp Treatment', am: 'የራስ ቆዳ ህክምና' }, desc: { en: 'Nourishing scalp therapy for healthy hair growth.', am: 'ለጤናማ የፀጉር እድገት የሚያገለግል ህክምና' }, tags: ['hair'], price: 'ETB 1600', img: 'img/hair/13.jpeg' },
+                { id: 'h14', name: { en: 'Texture Waves', am: 'ቲክስቸር ዌቭስ' }, desc: { en: 'Beautiful, natural-looking beach waves for any length.', am: 'ለማንኛውም ርዝመት ተፈጥሯዊ የባህር ማዕበል ቅጥ' }, tags: ['hair'], price: 'ETB 1900', img: 'img/hair/14.jpeg' },
+                { id: 'h15', name: { en: 'Hair Gloss', am: 'የፀጉር ግሎስ' }, desc: { en: 'Semi-permanent shine and tone enhancer.', am: 'ፀጉርን አንጸባራቂ እና ቀለም የሚያሳድር ህክምና' }, tags: ['hair'], price: 'ETB 1400', img: 'img/hair/15.jpeg' },
+                { id: 'h16', name: { en: 'Fringe Trim', am: 'የፊት ፀጉር መቆረጥ' }, desc: { en: 'Quick, precise trim for bangs and face-framing layers.', am: 'ለፊት ፀጉር ፈጣን እና ትክክለኛ መቆረጥ' }, tags: ['hair'], price: 'ETB 900', img: 'img/hair/16.jpeg' },
+                { id: 'h17', name: { en: 'Root Touch-Up', am: 'ስር ማደስ' }, desc: { en: 'Quick color refresh for regrowth between full colors.', am: 'በቀለም መካከል ስርን ማደስ' }, tags: ['hair'], price: 'ETB 2000', img: 'img/hair/17.jpeg' },
+                { id: 'h18', name: { en: 'Creative Color', am: 'ፈጠራዊ ቀለም' }, desc: { en: 'Bold, vibrant fashion colors like pastels and neon.', am: 'ደማቅ እና ፈጠራዊ ቀለሞች' }, tags: ['hair'], price: 'ETB 3000', img: 'img/hair/18.jpeg' },
+                { id: 'h19', name: { en: 'Hair Straightening', am: 'ፀጉር ማስተካከል' }, desc: { en: 'Sleek, straight finish with heat styling or treatment.', am: 'ለስላሳ እና ቀጥተኛ የፀጉር አሰራር' }, tags: ['hair'], price: 'ETB 2200', img: 'img/hair/19.jpeg' },
+                { id: 'h20', name: { en: 'Volume Blowout', am: 'ቮልዩም ብሎአውት' }, desc: { en: 'Big, bouncy blowout with maximum volume and lift.', am: 'ከፍተኛ መጠን ያለው ብሎአውት' }, tags: ['hair'], price: 'ETB 1800', img: 'img/hair/20.jpeg' },
+
+                // ─── PEDICURE (6 items) ──────────────────────────────
+                { id: 'p1', name: { en: 'Classic Pedicure', am: 'ክላሲክ ፔዲከር' }, desc: { en: 'Soak, scrub, trim, and polish for fresh feet.', am: 'መጠጥ፣ መቧጨር፣ መቁረጥ እና ቀለም ለእግሮች' }, tags: ['Pedicure'], price: 'ETB 1800', img: 'img/pedicure/1.jpeg' },
+                { id: 'p2', name: { en: 'Spa Pedicure', am: 'ስፓ ፔዲከር' }, desc: { en: 'Paraffin dip, exfoliating mask, and hot towel wrap.', am: 'ፓራፊን፣ ማስክ እና ሙቅ ፎጣ' }, tags: ['Pedicure'], price: 'ETB 2500', img: 'img/pedicure/2.jpeg' },
+                { id: 'p3', name: { en: 'Gel Pedicure', am: 'ጄል ፔዲከር' }, desc: { en: 'Long-lasting gel polish with UV cure.', am: 'በUV የሚደርቅ ረጅም ጊዜ የሚቆይ ጄል' }, tags: ['Pedicure'], price: 'ETB 2200', img: 'img/pedicure/3.jpeg' },
+                { id: 'p4', name: { en: 'Deluxe Pedicure', am: 'ዴሉክስ ፔዲከር' }, desc: { en: 'Callus removal, hot stone massage, and hydration mask.', am: 'የቆዳ መጠን ማስወገድ፣ ሙቅ ድንጋይ እና ማስክ' }, tags: ['Pedicure'], price: 'ETB 3000', img: 'img/pedicure/4.jpeg' },
+                { id: 'p5', name: { en: 'Express Pedicure', am: 'ኤክስፕረስ ፔዲከር' }, desc: { en: 'Quick refresh with trim, shape, and polish in 30 min.', am: 'በ30 ደቂቃ ውስጥ ፈጣን መቁረጥ እና ቀለም' }, tags: ['Pedicure'], price: 'ETB 1500', img: 'img/pedicure/5.jpeg' },
+                { id: 'p6', name: { en: 'Kids Pedicure', am: 'የልጆች ፔዲከር' }, desc: { en: 'Gentle, fun pedicure for little feet with colorful polish.', am: 'ለልጆች ቀላል እና አስደሳች ፔዲከር' }, tags: ['Pedicure'], price: 'ETB 1200', img: 'img/pedicure/6.jpeg' },
+
+                // ─── NAILS (20 items, as provided) ──────────────────
+                { id: 'n1', name: { en: 'Chrome Mirror', am: 'ክሮም መስታወት' }, desc: { en: 'High-shine metallic finish.', am: 'ከፍተኛ ብርሀን ያለው የብረት አንጸባራቂ' }, tags: ['nails', 'chrome', 'popular'], price: 'ETB 1600', img: 'img/nail/1.jpg' },
+                { id: 'n2', name: { en: '3D Floral Sculpt', am: '3D የአበባ ቅርጽ' }, desc: { en: 'Hand-sculpted acrylic flowers.', am: 'በእጅ የተሰሩ የአክሪሊክ አበባዎች' }, tags: ['nails', 'd3d', 'luxury'], price: 'ETB 1200', img: 'img/nail/2.jpg' },
+                { id: 'n3', name: { en: 'Modern French', am: 'ዘመናዊ ፈረንሳይ' }, desc: { en: 'V-shaped colored tips.', am: 'ቪ-ቅርጽ ያላቸው ባለቀለም ጫፎች' }, tags: ['nails', 'french', 'classic'], price: 'ETB 1300', img: 'img/nail/3.jpg' },
+                { id: 'n4', name: { en: 'Ombré Gradient', am: 'ኦምብሬ ቅልቅል' }, desc: { en: 'Seamless color fade across nails.', am: 'በጥፍር ላይ ያለማቋረጥ የቀለም መቀላቀል' }, tags: ['nails', 'ombre', 'matte'], price: 'ETB 1400', img: 'img/nail/4.jpg' },
+                { id: 'n5', name: { en: 'Marble Vein', am: 'እብነበረድ መስመር' }, desc: { en: 'White marble with gold veins.', am: 'በወርቅ መስመሮች የተሞላ ነጭ እብነበረድ' }, tags: ['nails', 'marble', 'gold'], price: 'ETB 1800', img: 'img/nail/5.jpg' },
+                { id: 'n6', name: { en: 'Velvet Matte', am: 'ቬልቬት ማት' }, desc: { en: 'Smooth matte with deep texture.', am: 'ጥልቅ ሸካራነት ያለው ለስላሳ ማት' }, tags: ['nails', 'matte', 'luxury'], price: 'ETB 1200', img: 'img/nail/6.jpg' },
+                { id: 'n7', name: { en: 'Cat Eye Gel', am: 'ድመት አይን ጄል' }, desc: { en: 'Magnetic cat-eye effect with depth.', am: 'ጥልቀት ያለው መግነጢሳዊ የድመት አይን ውጤት' }, tags: ['nails', 'cateye', 'popular'], price: 'ETB 1700', img: 'img/nail/7.jpg' },
+                { id: 'n9', name: { en: 'Glitter Ombré', am: 'ብልጭልጭ ኦምብሬ' }, desc: { en: 'Sparkling gradient fade.', am: 'አንጸባራቂ የቀለም ቅልቅል ሽግግር' }, tags: ['nails', 'ombre', 'trendy'], price: 'ETB 1500', img: 'img/nail/9.jpg' },
+                { id: 'n10', name: { en: 'Aurora Ice', am: 'አውሮራ አይስ' }, desc: { en: 'Iridescent glass-like reflection.', am: 'የመስታወት ነጸብራቅ ያለው ባለብዙ ቀለም ውጤት' }, tags: ['nails', 'chrome', 'luxury'], price: 'ETB 1000', img: 'img/nail/10.jpg' },
+                { id: 'n14', name: { en: 'Animal Print', am: 'የእንስሳት ህትመት' }, desc: { en: 'Classic leopard and cheetah patterns.', am: 'የነብር እና የቺታ መልክ ያላቸው ህትመቶች' }, tags: ['nails', 'trendy', 'matte'], price: 'ETB 1350', img: 'img/nail/14.jpg' },
+
+                // ─── MAKEUP (13 items) ──────────────────────────────
+                { id: 'm1', name: { en: 'Natural Everyday', am: 'ተፈጥሯዊ የዕለት ተዕለት' }, desc: { en: 'Fresh, light makeup for daily wear.', am: 'ለዕለታዊ ህይወት ቀላል እና ተፈጥሯዊ ሜካፕ' }, tags: ['makeup'], price: 'ETB 2000', img: 'img/makeup/1.jpeg' },
+                { id: 'm2', name: { en: 'Glam Evening', am: 'ግላም ምሽት' }, desc: { en: 'Bold, dramatic makeup for nights out.', am: 'ለምሽት ዝግጅቶች ደማቅ ሜካፕ' }, tags: ['makeup'], price: 'ETB 2800', img: 'img/makeup/2.jpeg' },
+                { id: 'm3', name: { en: 'Bridal Classic', am: 'ክላሲክ የሰርግ' }, desc: { en: 'Timeless, elegant bridal makeup for your big day.', am: 'ለሰርግ ቀንዎ ዘላቂ እና የሚያምር ሜካፕ' }, tags: ['makeup'], price: 'ETB 3500', img: 'img/makeup/3.jpeg' },
+                { id: 'm4', name: { en: 'Editorial Look', am: 'ኤዲቶሪያል መልክ' }, desc: { en: 'High-fashion, avant-garde makeup for photoshoots.', am: 'ለፎቶ ቀረጻ የሚያምር እና ዘመናዊ ሜካፕ' }, tags: ['makeup'], price: 'ETB 3200', img: 'img/makeup/4.jpeg' },
+                { id: 'm5', name: { en: 'Soft Glam', am: 'ለስላሳ ግላም' }, desc: { en: 'Subtle shimmer and defined eyes for a polished look.', am: 'ለስላሳ አንጸባራቂ እና ግልጽ ዓይኖች' }, tags: ['makeup'], price: 'ETB 2400', img: 'img/makeup/5.jpeg' },
+                { id: 'm6', name: { en: 'Smokey Eye', am: 'ስሞኪ አይ' }, desc: { en: 'Classic smokey eye with perfect blend.', am: 'ክላሲክ ስሞኪ አይ ለዓይኖች' }, tags: ['makeup'], price: 'ETB 2500', img: 'img/makeup/6.jpeg' },
+                { id: 'm7', name: { en: 'Bold Lip Focus', am: 'ደማቅ ከንፈር' }, desc: { en: 'Vibrant lip color as the centerpiece of your look.', am: 'ደማቅ የከንፈር ቀለም ዋና ትኩረት' }, tags: ['makeup'], price: 'ETB 2100', img: 'img/makeup/7.jpeg' },
+                { id: 'm8', name: { en: 'Airbrush Finish', am: 'ኤርብራሽ አጨራረስ' }, desc: { en: 'Flawless, long-lasting airbrush foundation.', am: 'ለስላሳ እና ረጅም ጊዜ የሚቆይ ኤርብራሽ' }, tags: ['makeup'], price: 'ETB 3000', img: 'img/makeup/8.jpeg' },
+                { id: 'm9', name: { en: 'Minimalist', am: 'ዝቅተኛ' }, desc: { en: 'Barely-there makeup for a no-makeup look.', am: 'ሜካፕ የሌለ መልክ ለተፈጥሯዊ ውበት' }, tags: ['makeup'], price: 'ETB 1800', img: 'img/makeup/9.jpeg' },
+                { id: 'm10', name: { en: 'Festival Glitter', am: 'ፌስቲቫል ብልጭልጭ' }, desc: { en: 'Fun, sparkly glitter makeup for festivals and parties.', am: 'ለፌስቲቫሎች እና ድግሶች አስደሳች ብልጭልጭ' }, tags: ['makeup'], price: 'ETB 2300', img: 'img/makeup/10.jpeg' },
+                { id: 'm11', name: { en: 'Matte Perfection', am: 'ማት ፐርፌክሽን' }, desc: { en: 'Full-coverage matte finish for a flawless complexion.', am: 'ሙሉ ሽፋን ያለው ማት አጨራረስ' }, tags: ['makeup'], price: 'ETB 2600', img: 'img/makeup/11.jpeg' },
+                { id: 'm12', name: { en: 'Dewy Glow', am: 'ደቪ ግሎው' }, desc: { en: 'Hydrating, radiant makeup for a fresh, dewy look.', am: 'እርጥበት ያለው እና አንጸባራቂ መልክ' }, tags: ['makeup'], price: 'ETB 2200', img: 'img/makeup/12.jpeg' },
+                
+            ];
+
+            // ─── TRANSLATIONS ──────────────────────────────────────
+            const UI = {
+                en: {
+                    heroSub: '✦ LINDA BEAUTY CORNER',
+                    heroTitle: 'Beauty, Confidence & Elegance.',
+                    heroDesc: 'Discover beautiful hair, pedicure, nails, makeup & pedicure — all designed to make you feel your best.',
+                    heroBtn1: 'Explore Services',
+                    heroBtn2: 'Book Appointment',
+                    servicesEyebrow: '✦ Our Services',
+                    servicesTitle: 'Beauty, crafted for you',
+                    sHair: 'Hair',
+                    sHairDesc: 'Styling, treatments, coloring & extensions',
+                    sPedicure: 'Pedicure',
+                    sPedicureDesc: 'Classic, spa, gel, soak & massage',
+                    sNails: 'Nails',
+                    sNailsDesc: 'Manicure, gel, art & pedicure',
+                    sMakeup: 'Makeup',
+                    sMakeupDesc: 'Natural, bridal & event makeup',
+                    sHairLink: 'View Services →',
+                    sPedicureLink: 'View Services →',
+                    sNailsLink: 'View Services →',
+                    sMakeupLink: 'View Services →',
+                    galleryEyebrow: '✦ Portfolio',
+                    galleryTitle: 'Our beauty services',
+                    fAll: 'All',
+                    fHair: 'Hair',
+                    fpedicure: 'Pedicure',
+                    fNails: 'Nails',
+                    fMakeup: 'Makeup',
+                    testimonialEyebrow: '✦ Testimonials',
+                    testimonialTitle: 'What our guests say',
+                    aboutEyebrow: '✦ About LINDA',
+                    aboutTitle: 'Where beauty meets care',
+                    aboutDesc: 'At LINDA BEAUTY CORNER, we believe in the power of personal transformation. Our skilled team offers bespoke hair, nail, makeup, and pedicure services in a warm, elegant space. Every detail is crafted to make you feel confident and radiant.',
+                    bookTitle: 'Ready to feel beautiful?',
+                    bookSub: 'Book your appointment and let us take care of the rest.',
+                    bookHours: '2:00am - 12:00pm ·  Bole, Atlas Platinum plaza 2nd floor',
+                    stickyBtn: 'Book Now',
+                    lbBook: 'Download Image',
+                    lbCall: 'Call to Book',
+                    t1: '"Absolutely loved my experience! The team made me feel so pampered."',
+                    c1: '- [CLIENT]',
+                    t2: '"LINDA is my go-to for pedicure and hair. Always perfection."',
+                    c2: '- [CLIENT]',
+                    t3: '"Elegant atmosphere, professional staff, beautiful results."',
+                    c3: '- [CLIENT]',
+                    t4: '"The pedicure was amazing — my feet have never felt better!"',
+                    c4: '- [CLIENT]',
+                },
+                am: {
+                    heroSub: '✦ ሊንዳ ውበት ሳሎን',
+                    heroTitle: 'ውበት፣ በራስ መተማመን እና ጸጋ',
+                    heroDesc: 'ቆንጆ ፀጉር፣ ጥፍር፣ ሜካፕ እና ፔዲከር — ሁሉም እርስዎን እንዲስማሞዎት ተደርጎ ተዘጋጅቷል።',
+                    heroBtn1: 'ዲዛይን ይምረጡ',
+                    heroBtn2: 'ቀጠሮ ይያዙ',
+                    servicesEyebrow: '✦ አገልግሎቶቻችን',
+                    servicesTitle: 'ዉብ የሆነው ሁሉ ይገባዎታል   ',
+                    sHair: 'ፀጉር',
+                    sHairDesc: 'ባህላዊ፣ ዘመናዊ፣ ቀለም እና ተጨማሪ',
+                    sPedicure: 'ፔዲከር',
+                    sPedicureDesc: 'ክላሲክ፣ ስፓ፣ ጄል እና ማሳጀት',
+                    sNails: 'ጥፍር',
+                    sNailsDesc: 'ማኒከር፣ ጄል፣ ጥበብ እና ፔዲከር',
+                    sMakeup: 'ሜካፕ',
+                    sMakeupDesc: 'ተፈጥሯዊ፣ የሰርግ እና የዝግጅት ሜካፕ',
+                    sHairLink: 'አገልግሎቶችን ይመልከቱ →',
+                    sPedicureLink: 'አገልግሎቶችን ይመልከቱ →',
+                    sNailsLink: 'አገልግሎቶችን ይመልከቱ →',
+                    sMakeupLink: 'አገልግሎቶችን ይመልከቱ →',
+                    galleryEyebrow: '✦ ስራዎቻችን',
+                    galleryTitle: 'የውበት አገልግሎቶቻችን',
+                    fAll: 'ሁሉም',
+                    fHair: 'ፀጉር',
+                    fpedicure: 'ፔዲከር',
+                    fNails: 'ጥፍር',
+                    fMakeup: 'ሜካፕ',
+                    testimonialEyebrow: '✦ ምስክርነት',
+                    testimonialTitle: 'እንግዶቻችን ምን ይላሉ',
+                    aboutEyebrow: '✦ ስለ  ሊንዳ',
+                    aboutTitle: 'ውበት እና እንክብካቤ የሚገናኙበት',
+                    aboutDesc: 'በLINDA BEAUTY CORNER፣ በግለሰብ ደረጃ በሚደረግ አዎንታዊ ለውጥ ኃይል እናምናለን። ብቁ የሆነው ቡድናችን፤ ምቹ እና ውብ በሆነ ስፍራ ውስጥ ለፍላጎትዎ የተበጁ የፀጉር፣ የጥፍር፣ የመዋቢያ እና የእግር ውበት (pedicure) አገልግሎቶችን ይሰጣል። እያንዳንዱ ዝርዝር ሁኔታ የተዘጋጀው በራስ መተማመን እንዲሰማዎት እና ውበትዎ ጎልቶ እንዲታይ ለማድረግ ነው።',
+                    bookTitle: 'ቆንጆ ሆኖ ለመታየት ይደውሉልን',
+                    bookSub: 'ቀጠሮ ይያዙ እና የተቀረውን እንድንከባከብ ይተዉልን።',
+                    bookHours: '2:00am - 12:00pm · ቦሌ፣ አትላስ ፕላቲነም ፕላዛ፣ 2ኛ ፎቅ',
+                    stickyBtn: 'አሁን ይደውሉ',
+                    lbBook: 'ምስል አውርድ',
+                    lbCall: 'ይደውሉ እና ይያዙ',
+                    t1: '"ያሳለፍኩት ጊዜ እጅግ አስደሳች ነበር! የቡድኑ አባላት ልዩ እንክብካቤ እንደተደረገልኝ እንዲሰማኝ አድርገውኛል።"',
+                    c1: '- [ደንበኛ]',
+                    t2: '"ለፔዲኪር (የእግር ውበት አገልግሎት) እና ለፀጉር ስራ ሁሌም የምመርጣት ሊንዳን (LINDA) ነው። ውጤቱ ሁሌም ፍጹም ነው።"',
+                    c2: '- [ደንበኛ]',
+                    t3: '"አማላይ ድባብ፣ ሙያተኛ ሰራተኞች፣ ውብ ውጤቶች።"',
+                    c3: '- [ደንበኛ]',
+                    t4: 'የእግር ውበት(pedicure) እጅግ አስደናቂ ነበር፤ እግሮቼ ከዚህ በፊት እንዲህ ተሰምቷቸው አያውቅም!',
+                    c4: '- [ደንበኛ]',
+                }
+            };
+
+            // ─── STATE ─────────────────────────────────────────────
+            let currentLang = 'en';
+            let currentFilter = 'all';
+            let observer = null;
+            let autoScrollInterval = null;
+            const testimonialTrack = document.getElementById('testimonialTrack');
+
+            // ─── DOM REFS ───────────────────────────────────────────
+            const masonryGrid = document.getElementById('masonryGrid');
+            const lightbox = document.getElementById('lightbox');
+            const lbImg = document.getElementById('lightboxImg');
+            const lbName = document.getElementById('lightboxName');
+            const lbPrice = document.getElementById('lightboxPrice');
+            const filterWrapper = document.getElementById('filterWrapper');
+            const galleryWrap = document.getElementById('gallery');
+            const lbBookBtn = document.getElementById('lbBookBtn');
+
+            // ─── HELPERS ────────────────────────────────────────────
+            function hashString(str) {
+                let hash = 0;
+                for (let i = 0; i < str.length; i++) {
+                    const char = str.charCodeAt(i);
+                    hash = ((hash << 5) - hash) + char;
+                    hash = hash & hash;
+                }
+                return Math.abs(hash);
+            }
+
+            function getPlaceholderColor(path) {
+                const h = hashString(path);
+                const hues = [30, 35, 40, 25, 45, 20, 50, 55];
+                const hue = hues[h % hues.length];
+                const sat = 12 + (h % 8);
+                const lig = 78 + (h % 12);
+                return `hsl(${hue}, ${sat}%, ${lig}%)`;
+            }
+
+            // ─── OBSERVER: lazy load ──────────────────────────────
+            function setupLazyObserver() {
+                if (observer) observer.disconnect();
+                observer = new IntersectionObserver((entries) => {
+                    for (const entry of entries) {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            const src = img.dataset.src;
+                            if (src && !img.src) {
+                                img.src = src;
+                            }
+                            if (img.src) observer.unobserve(img);
+                        }
+                    }
+                }, { rootMargin: '400px 0px', threshold: 0.01 });
+                return observer;
+            }
+
+            // ─── CREATE CARD ──────────────────────────────────────
+            function createCard(item, lang, index) {
+                const div = document.createElement('div');
+                div.className = 'item-card';
+                div.dataset.id = item.id;
+                div.dataset.tags = item.tags.join(',');
+
+                const name = item.name[lang] || item.name.en;
+                const desc = item.desc[lang] || item.desc.en;
+                const price = item.price;
+                const bgColor = getPlaceholderColor(item.img);
+
+                const isEager = index < 8;
+                const loadAttr = isEager ? 'src' : 'data-src';
+                const fetchPriority = isEager ? 'fetchpriority="high"' : '';
+                const loadingAttr = isEager ? 'loading="eager"' : 'loading="lazy"';
+
+                div.innerHTML = `
+                            <div class="item-img-wrap" style="background:${bgColor};">
+                                <div class="img-placeholder" style="background:${bgColor};"></div>
+                                <img
+                                    ${loadAttr}="${item.img}"
+                                    alt="${name}"
+                                    ${loadingAttr}
+                                    decoding="async"
+                                    ${fetchPriority}
+                                    width="400"
+                                    height="400"
+                                />
+                            </div>
+                            <div class="item-body">
+                                <h3>${name}</h3>
+                                <div class="desc">${desc}</div>
+                                <div><span class="item-tag">${item.tags[0]}</span></div>
+                                <div class="price">${price}</div>
+                            </div>
+                        `;
+
+                const imgEl = div.querySelector('img');
+                const placeholder = div.querySelector('.img-placeholder');
+
+                if (!isEager && observer) {
+                    observer.observe(imgEl);
+                }
+
+                imgEl.addEventListener('load', function() {
+                    this.classList.add('loaded');
+                    if (placeholder) placeholder.classList.add('hidden');
+                });
+                imgEl.addEventListener('error', function() {
+                    this.classList.add('loaded');
+                    if (placeholder) placeholder.classList.add('hidden');
+                });
+                if (imgEl.complete && imgEl.src) {
+                    imgEl.classList.add('loaded');
+                    if (placeholder) placeholder.classList.add('hidden');
+                }
+
+                // Lightbox click
+                div.addEventListener('click', function() {
+                    const nameText = item.name[lang] || item.name.en;
+                    lbImg.src = item.img;
+                    lbImg.alt = nameText;
+                    lbName.textContent = nameText;
+                    lbPrice.textContent = price;
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+
+                return div;
+            }
+
+            // ─── RENDER GALLERY ──────────────────────────────────
+            function renderGallery(lang, filter, scrollToGallery = false) {
+                let items = filter === 'all' ?
+                    CATALOG :
+                    CATALOG.filter(item => item.tags.includes(filter));
+
+                // Fixed order for 'all': Hair, Pedicure, Nails, Makeup (no shuffle)
+
+                masonryGrid.innerHTML = '';
+                setupLazyObserver();
+
+                requestAnimationFrame(() => {
+                    items.forEach((item, idx) => {
+                        masonryGrid.appendChild(createCard(item, lang, idx));
+                    });
+                    // trigger lazy for any visible
+                    setTimeout(() => {
+                        document.querySelectorAll('.item-img-wrap img[data-src]').forEach(img => {
+                            const rect = img.getBoundingClientRect();
+                            if (rect.top < window.innerHeight + 400) {
+                                if (!img.src && img.dataset.src) {
+                                    img.src = img.dataset.src;
+                                }
+                            }
+                        });
+                    }, 50);
+                });
+
+                // Auto-scroll to gallery if requested
+                if (scrollToGallery && galleryWrap) {
+                    const headerHeight = document.getElementById('mainHeader').offsetHeight || 68;
+                    const filterHeight = filterWrapper.offsetHeight || 50;
+                    const targetY = galleryWrap.getBoundingClientRect().top + window.pageYOffset - headerHeight - filterHeight - 10;
+                    window.scrollTo({ top: targetY, behavior: 'smooth' });
+                }
+            }
+
+            // ─── UPDATE UI TEXT ──────────────────────────────────
+            function updateUI(lang) {
+                const t = UI[lang];
+                document.getElementById('heroSub').textContent = t.heroSub;
+                document.getElementById('heroTitle').textContent = t.heroTitle;
+                document.getElementById('heroDesc').textContent = t.heroDesc;
+                document.querySelector('#heroBtn1 span').textContent = t.heroBtn1;
+                document.querySelector('#heroBtn2 span').textContent = t.heroBtn2;
+
+                document.getElementById('servicesEyebrow').textContent = t.servicesEyebrow;
+                document.getElementById('servicesTitle').textContent = t.servicesTitle;
+                document.getElementById('sHair').textContent = t.sHair;
+                document.getElementById('sHairDesc').textContent = t.sHairDesc;
+                document.getElementById('sPedicure').textContent = t.sPedicure;
+                document.getElementById('sPedicureDesc').textContent = t.sPedicureDesc;
+                document.getElementById('sNails').textContent = t.sNails;
+                document.getElementById('sNailsDesc').textContent = t.sNailsDesc;
+                document.getElementById('sMakeup').textContent = t.sMakeup;
+                document.getElementById('sMakeupDesc').textContent = t.sMakeupDesc;
+                document.getElementById('sHairLink').textContent = t.sHairLink;
+                document.getElementById('sPedicureLink').textContent = t.sPedicureLink;
+                document.getElementById('sNailsLink').textContent = t.sNailsLink;
+                document.getElementById('sMakeupLink').textContent = t.sMakeupLink;
+
+                document.getElementById('galleryEyebrow').textContent = t.galleryEyebrow;
+                document.getElementById('galleryTitle').textContent = t.galleryTitle;
+
+                document.getElementById('fAll').textContent = t.fAll;
+                document.getElementById('fHair').textContent = t.fHair;
+                document.getElementById('fpedicure').textContent = t.fpedicure;
+                document.getElementById('fNails').textContent = t.fNails;
+                document.getElementById('fMakeup').textContent = t.fMakeup;
+
+                document.getElementById('testimonialEyebrow').textContent = t.testimonialEyebrow;
+                document.getElementById('testimonialTitle').textContent = t.testimonialTitle;
+
+                document.getElementById('aboutEyebrow').textContent = t.aboutEyebrow;
+                document.getElementById('aboutTitle').textContent = t.aboutTitle;
+                document.getElementById('aboutDesc').textContent = t.aboutDesc;
+
+                document.getElementById('bookTitle').textContent = t.bookTitle;
+                document.getElementById('bookSub').textContent = t.bookSub;
+                document.getElementById('bookHours').textContent = t.bookHours;
+
+                document.querySelector('#stickyBtn span').textContent = t.stickyBtn;
+                document.querySelector('#lbBookBtn span').textContent = t.lbBook;
+                document.querySelector('#lbCallBtn span').textContent = t.lbCall;
+
+                // Render testimonials
+                renderTestimonials(lang);
+            }
+
+            // ─── TESTIMONIALS ─────────────────────────────────────
+            function renderTestimonials(lang) {
+                const t = UI[lang];
+                const items = [
+                    { text: t.t1, client: t.c1 },
+                    { text: t.t2, client: t.c2 },
+                    { text: t.t3, client: t.c3 },
+                    { text: t.t4, client: t.c4 },
+                ];
+                testimonialTrack.innerHTML = items.map(item => `
+                            <div class="testimonial-item">
+                                <p>${item.text}</p>
+                                <div class="client">${item.client}</div>
+                            </div>
+                        `).join('');
+                // reset auto-scroll
+                startAutoScroll();
+            }
+
+            // ─── AUTO-SCROLL TESTIMONIALS ────────────────────────
+            function startAutoScroll() {
+                if (autoScrollInterval) clearInterval(autoScrollInterval);
+                autoScrollInterval = setInterval(() => {
+                    if (!testimonialTrack) return;
+                    const maxScroll = testimonialTrack.scrollWidth - testimonialTrack.clientWidth;
+                    if (maxScroll <= 0) return;
+                    const current = testimonialTrack.scrollLeft;
+                    const step = 280;
+                    let next = current + step;
+                    if (next >= maxScroll) next = 0;
+                    testimonialTrack.scrollTo({ left: next, behavior: 'smooth' });
+                }, 4000);
+            }
+
+            // Stop auto-scroll on user interaction, restart after idle
+            testimonialTrack.addEventListener('pointerdown', () => {
+                if (autoScrollInterval) clearInterval(autoScrollInterval);
+            });
+            testimonialTrack.addEventListener('pointerup', () => {
+                setTimeout(startAutoScroll, 4000);
+            });
+            testimonialTrack.addEventListener('touchstart', () => {
+                if (autoScrollInterval) clearInterval(autoScrollInterval);
+            });
+            testimonialTrack.addEventListener('touchend', () => {
+                setTimeout(startAutoScroll, 4000);
+            });
+
+            // ─── LIGHTBOX CONTROLS ────────────────────────────────
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === this) closeLightbox();
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeLightbox();
+            });
+
+            // ─── LIGHTBOX DOWNLOAD BUTTON (canvas method) ──────────
+            lbBookBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const img = lbImg;
+                if (!img.src || img.src === '') return;
+
+                // Create a canvas and draw the image
+                const canvas = document.createElement('canvas');
+                // Use natural dimensions or fallback to display size
+                canvas.width = img.naturalWidth || img.width || 800;
+                canvas.height = img.naturalHeight || img.height || 600;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+                // Attempt to export as blob and trigger download
+                try {
+                    canvas.toBlob(function(blob) {
+                        if (!blob) {
+                            // Fallback: use anchor with download attribute
+                            const a = document.createElement('a');
+                            a.href = img.src;
+                            a.download = 'LINDA-beauty-image.jpeg';
+                            document.body.appendChild(a);
+                            a.click();
+                            document.body.removeChild(a);
+                            return;
+                        }
+                        const url = URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = 'LINDA-beauty-image.jpeg';
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                        URL.revokeObjectURL(url);
+                    }, 'image/jpeg', 0.95);
+                } catch (err) {
+                    // Fallback if canvas fails (e.g., tainted)
+                    const a = document.createElement('a');
+                    a.href = img.src;
+                    a.download = 'LINDA-beauty-image.jpeg';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                }
+            });
+
+            // ─── FILTER CLICKS (with auto-scroll) ────────────────
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    currentFilter = this.dataset.filter;
+                    // Render and scroll to gallery
+                    renderGallery(currentLang, currentFilter, true);
+                });
+            });
+
+            // ─── LANGUAGE TOGGLE ──────────────────────────────────
+            document.getElementById('langToggle').addEventListener('click', function() {
+                currentLang = currentLang === 'en' ? 'am' : 'en';
+                this.textContent = currentLang === 'en' ? 'አማ' : 'EN';
+                this.classList.toggle('active', currentLang === 'am');
+                updateUI(currentLang);
+                renderGallery(currentLang, currentFilter, false);
+            });
+
+            // ─── HEADER SCROLL SHADOW ─────────────────────────────
+            window.addEventListener('scroll', function() {
+                const h = document.getElementById('mainHeader');
+                if (window.scrollY > 10) h.classList.add('scrolled');
+                else h.classList.remove('scrolled');
+
+                // filter bar shadow
+                const filterRect = filterWrapper.getBoundingClientRect();
+                if (filterRect.top <= 0) {
+                    filterWrapper.classList.add('scrolled');
+                } else {
+                    filterWrapper.classList.remove('scrolled');
+                }
+            });
+
+            // ─── INIT ──────────────────────────────────────────────
+            function init() {
+                updateUI('en');
+                renderGallery('en', 'all', false);
+                // language toggle initial state
+                document.getElementById('langToggle').textContent = 'አማ';
+                document.getElementById('langToggle').classList.remove('active');
+                // start auto-scroll after a beat
+                setTimeout(startAutoScroll, 1000);
+            }
+
+            if (document.readyState === 'complete') {
+                init();
+            } else {
+                window.addEventListener('load', init);
+            }
+
+            // ─── PLACEHOLDER ALERTS FOR DEMO ──────────────────────
+            document.querySelectorAll('a[href="[PHONE NUMBER]"], a[href="tel:+251949017356"]').forEach(el => {
+                el.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('[PHONE NUMBER] – replace with real phone');
+                });
+            });
+            document.querySelectorAll('a[href="[GOOGLE MAPS URL]"]').forEach(el => {
+                el.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('[GOOGLE MAPS URL] – replace with real map link');
+                });
+            });
+            document.querySelectorAll('a[href="[INSTAGRAM URL]"]').forEach(el => {
+                el.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('[INSTAGRAM URL] – replace with real Instagram link');
+                });
+            });
+
+        })();
+    </script>
+</body>
+</html>
